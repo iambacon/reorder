@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video reorder - jQuery widget</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Video reorder</h1>
+    <ul id="reorder" class="video-list">
+        <li draggable="true" class="video-list__item horizontal">
+            <figure class="horizontal__item half">
+                <video controls class="video-list__video" src="http://stream.flowplayer.org/white/470x250.webm">
+                    <p>Sorry your browser cannot play this video.</p>
+                </video>
+            </figure>
+            <div class="horizontal__item half">
+                <dl class="horizontal">
+                    <dt class="horizontal__item horizontal__item--clear video-list__title">Title:</dt>
+                    <dd class="video-list__desc">Sprite, Summer of Sound</dd>
+                    <dt class="horizontal__item horizontal__item--clear video-list__title">Duration:</dt>
+                    <dd class="video-list__desc">00:30:00</dd>
+                </dl>
+                <ul class="horizontal">
+                    <li class="horizontal__item">
+                        <button>View</button>
+                    </li>
+                    <li class="horizontal__item">
+                        <button>Modify</button>
+                    </li>
+                    <li class="horizontal__item">
+                        <button>Delete</button>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+        <li draggable="true" class="video-list__item horizontal">
+            <figure class="horizontal__item half">
+                <video controls class="video-list__video" src="http://stream.flowplayer.org/white/470x250.webm">
+                    <p>Sorry your browser cannot play this video.</p>
+                </video>
+            </figure>
+            <div class="horizontal__item half">
+                <dl class="horizontal">
+                    <dt class="horizontal__item horizontal__item--clear video-list__title">Title:</dt>
+                    <dd class="video-list__desc">Fanta, Summer of Sound</dd>
+                    <dt class="horizontal__item horizontal__item--clear video-list__title">Duration:</dt>
+                    <dd class="video-list__desc">00:30:00</dd>
+                </dl>
+                <ul class="horizontal">
+                    <li class="horizontal__item">
+                        <button>View</button>
+                    </li>
+                    <li class="horizontal__item">
+                        <button>Modify</button>
+                    </li>
+                    <li class="horizontal__item">
+                        <button>Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li draggable="true" class="video-list__item horizontal">
+            <figure class="horizontal__item half">
+                <video controls class="video-list__video" src="http://stream.flowplayer.org/white/470x250.webm">
+                    <p>Sorry your browser cannot play this video.</p>
+                </video>
+            </figure>
+            <div class="horizontal__item half">
+                <dl class="horizontal">
+                    <dt class="horizontal__item horizontal__item--clear video-list__title">Title:</dt>
+                    <dd class="video-list__desc">Coca Cola, Summer of Sound</dd>
+                    <dt class="horizontal__item horizontal__item--clear video-list__title">Duration:</dt>
+                    <dd class="video-list__desc">00:30:00</dd>
+                </dl>
+                <ul class="horizontal">
+                    <li class="horizontal__item">
+                        <button>View</button>
+                    </li>
+                    <li class="horizontal__item">
+                        <button>Modify</button>
+                    </li>
+                    <li class="horizontal__item">
+                        <button>Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/jquery.cb.reorder.js"></script>
+    <script>
+    jQuery(document).ready(function() {
+        jQuery('#reorder').reorder({
+            dragstart: function(event, data) {
+                console.log('Event: dragstart');
+            },
+            dragover: function(event, data) {
+                console.log('Event: dragover');
+            },
+            drop: function(event, data) {
+                console.log('Event: drop');
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
